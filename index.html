@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Vacation rentals, cabins, beach houses, & more</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="airbnb_icon_131000.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="airbnb-header" id="mainHeader">
+        <div class="header-top-row">
+            <div class="header-logo">
+                <i class="fa-brands fa-airbnb"></i>
+                <span>airbnb</span>
+            </div>
+
+            <div class="header-center-core">
+                <nav class="desktop-nav-tabs" id="desktopTabs">
+                    <button class="nav-tab active">
+                        <span class="tab-graphic">🏠</span> <span class="tab-lbl">Homes</span>
+                    </button>
+                    <button class="nav-tab">
+                        <span class="tab-graphic">🎈</span> <span class="tab-lbl">Experiences</span>
+                        <span class="badge-new-item">NEW</span>
+                    </button>
+                    <button class="nav-tab">
+                        <span class="tab-graphic">🛎️</span> <span class="tab-lbl">Services</span>
+                        <span class="badge-new-item">NEW</span>
+                    </button>
+                </nav>
+
+                <div class="desktop-mini-pill" id="desktopMiniSearch">
+                    <div class="pill-seg"><span class="pill-icon">🏠</span> <strong>Anywhere</strong></div>
+                    <div class="pill-v-line"></div>
+                    <div class="pill-seg">Anytime</div>
+                    <div class="pill-v-line"></div>
+                    <div class="pill-seg text-muted">Add guests</div>
+                    <button class="pill-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="mobile-search-capsule">
+                <div class="mob-pill-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Start your search</span>
+                </div>
+            </div>
+
+            <div class="header-right-actions">
+                <a href="#" class="host-cta">Become a host</a>
+                <button class="globe-icon-btn"><i class="fa-solid fa-globe"></i></button>
+                <div class="user-menu-dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom-row" id="expandedSearchRow">
+            <div class="search-panel-matrix">
+                <div class="matrix-input-cell">
+                    <label>Where</label>
+                    <input type="text" placeholder="Search destinations">
+                </div>
+                <div class="matrix-v-divider"></div>
+                <div class="matrix-input-cell">
+                    <label>When</label>
+                    <span class="val-placeholder">Add dates</span>
+                </div>
+                <div class="matrix-v-divider"></div>
+                <div class="matrix-input-cell split-action-layout">
+                    <div class="cell-left">
+                        <label>Who</label>
+                        <span class="val-placeholder">Add guests</span>
+                    </div>
+                    <button class="matrix-submit-circle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-slider-row-wrapper">
+            <nav class="mobile-scrollable-track" id="mobileSliderTrack">
+                <button class="mobile-track-item active">
+                    <span class="track-emoji">🏠</span> <span class="track-txt">Homes</span>
+                </button>
+                <button class="mobile-track-item">
+                    <span class="track-emoji">🎈</span> <span class="track-txt">Experiences</span>
+                    <span class="badge-new-item">NEW</span>
+                </button>
+                <button class="mobile-track-item">
+                    <span class="track-emoji">🛎️</span> <span class="track-txt">Services</span>
+                    <span class="badge-new-item">NEW</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-body-container">
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-section-wrapper">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+        <section class="properties-section-wrapper last">
+            <div class="section-header-row">
+                <h2 class="section-heading-title">Popular homes in Cape Town</h2>
+                <div class="slider-arrow-controls">
+                    <button class="arrow-btn left-arrow" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="properties-horizontal-scroll-track">
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Apartment in Clifton</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$566</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Guest suite in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.98</span>
+                    </div>
+                    <p class="property-price-line"><strong>$508</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80');">
+                        <span class="guest-favorite-pill">Guest favorite</span>
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Room in Sea Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 4.85</span>
+                    </div>
+                    <p class="property-price-line"><strong>$61</strong> for 2 nights</p>
+                </div>
+
+                <div class="property-listing-card">
+                    <div class="card-media-box" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');">
+                        <button class="card-heart-save"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-metadata-row">
+                        <span class="property-title-lbl">Condo in Green Point</span>
+                        <span class="property-rating-box"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <p class="property-price-line"><strong>$225</strong> for 2 nights</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="getaways-section">
+    <h2 class="getaways-title">Inspiration for future getaways</h2>
+
+    <div class="getaways-tabs-container">
+        <div class="getaways-tabs-track">
+            <button class="getaways-tab active">Popular</button>
+            <button class="getaways-tab">Arts & culture</button>
+            <button class="getaways-tab">Beach</button>
+            <button class="getaways-tab">Mountains</button>
+            <button class="getaways-tab">Outdoors</button>
+            <button class="getaways-tab">Things to do</button>
+            <button class="getaways-tab">Travel tips & inspiration</button>
+            <button class="getaways-tab">Airbnb-friendly apartments</button>
+        </div>
+        <div class="tabs-scroll-indicator">
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <div class="getaways-grid">
+        <div class="getaway-item">
+            <span class="getaway-dest">St. Petersburg</span>
+            <span class="getaway-type">Cottage rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">San Jose</span>
+            <span class="getaway-type">Vacation rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Maui</span>
+            <span class="getaway-type">Condo rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Brooklyn</span>
+            <span class="getaway-type">Apartment rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Philadelphia</span>
+            <span class="getaway-type">Monthly Rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Orange Beach</span>
+            <span class="getaway-type">Cottage rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Galveston</span>
+            <span class="getaway-type">Apartment rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Sacramento</span>
+            <span class="getaway-type">Monthly Rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Nashville</span>
+            <span class="getaway-type">House rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Charleston</span>
+            <span class="getaway-type">Apartment rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">North Myrtle Beach</span>
+            <span class="getaway-type">Vacation rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Portland</span>
+            <span class="getaway-type">Condo rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Nice</span>
+            <span class="getaway-type">Apartment rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Miramar Beach</span>
+            <span class="getaway-type">Cottage rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Montreal</span>
+            <span class="getaway-type">Condo rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Milan</span>
+            <span class="getaway-type">Monthly Rentals</span>
+        </div>
+        <div class="getaway-item">
+            <span class="getaway-dest">Destin</span>
+            <span class="getaway-type">House rentals</span>
+        </div>
+        <button class="getaway-item trigger-expand-btn">
+            <span class="getaway-dest">Show more <i class="fa-solid fa-chevron-down"></i></span>
+        </button>
+    </div>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-sitemap-grid">
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Get help with a safety issue</a></li>
+                    <li><a href="#">AirCover</a></li>
+                    <li><a href="#">Travel insurance</a></li>
+                    <li><a href="#">Anti-discrimination</a></li>
+                    <li><a href="#">Disability support</a></li>
+                    <li><a href="#">Cancellation options</a></li>
+                    <li><a href="#">Report neighborhood concern</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Hosting</h3>
+                <ul>
+                    <li><a href="#">Airbnb your home</a></li>
+                    <li><a href="#">Airbnb your experience</a></li>
+                    <li><a href="#">Airbnb your service</a></li>
+                    <li><a href="#">AirCover for Hosts</a></li>
+                    <li><a href="#">Hosting resources</a></li>
+                    <li><a href="#">Community forum</a></li>
+                    <li><a href="#">Hosting responsibly</a></li>
+                    <li><a href="#">Airbnb-friendly apartments</a></li>
+                    <li><a href="#">Join a free hosting class</a></li>
+                    <li><a href="#">Find a co-host</a></li>
+                    <li><a href="#">Refer a host</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Airbnb</h3>
+                <ul>
+                    <li><a href="#">2025 Summer Release</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Airbnb.org emergency stays</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-baseline">
+            
+            <div class="baseline-left">
+                <span>© 2026 Airbnb, Inc.</span>
+                <span class="dot-separator">•</span>
+                <a href="#">Privacy</a>
+                <span class="dot-separator">•</span>
+                <a href="#">Terms</a>
+                <span class="dot-separator">•</span>
+                <a href="#" class="privacy-choices-link">
+                    Your Privacy Choices 
+                    <span class="privacy-icon-mock"><img src="bottom-icon.png" alt="" style="width: 20px;"></span>
+                </a>
+            </div>
+
+            <div class="baseline-right">
+                <div class="footer-preferences">
+                    <button class="pref-btn"><i class="fa-solid fa-globe"></i> English (US)</button>
+                    <button class="pref-btn">€ EUR</button>
+                </div>
+                
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+  <div class="designer-badge">
+    <span class="label">Designed By:</span> OJIE DIVINE ERONBHONSELE - HIIT/2026/11167
+  </div>
+</div>
+</footer>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
